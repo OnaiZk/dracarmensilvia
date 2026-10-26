@@ -1,0 +1,124 @@
+/* Preserve intrinsic proportions when an image has HTML width/height attributes. */
+.home-education img{height:auto;object-fit:contain}
+.portrait img{height:auto;aspect-ratio:1;object-fit:cover}
+.doctor-mini img{width:64px;height:64px;flex:0 0 64px;object-fit:cover}
+.publication img{height:auto;object-fit:contain}
+#dialog-image{height:auto;max-width:100%;object-fit:contain}
+
+@media(max-width:760px){
+  html{scroll-padding-top:18px}
+  body{font-size:15px}
+  .page{margin:6px;padding:0 6px;border-radius:14px}
+  .page main,.section,.section>*{min-width:0}
+  .header{height:80px;padding:0 10px;gap:10px;flex-wrap:nowrap}
+  .brand{font-size:15px;gap:10px;flex-shrink:0}
+  .brand small{font-size:7px;letter-spacing:1.6px}
+  .brand-symbol{font-size:35px}
+  .menu-toggle{min-height:44px;padding:10px 12px;flex-shrink:0}
+  .header nav{top:72px;padding:16px;gap:4px;z-index:30}
+  .header nav a{display:block;padding:12px;border-radius:6px}
+  .header nav a[aria-current=page]{background:#e3f1fa}
+  .hero{min-height:0;padding:20px;gap:24px;display:block;background:#173f58}
+  .hero-art{inset:0 0 auto;height:clamp(190px,55vw,300px);background-image:linear-gradient(180deg,#153d5530 0%,#173f5805 35%,#173f58 100%),url('assets/respiracao-e-sono.jpg');background-size:100% 100%,100% auto;background-position:center,center top;background-repeat:no-repeat}
+  .hero:after{display:none}
+  .hero-top{position:relative;min-height:22px}
+  .hero-top .eyebrow{font-size:8px;letter-spacing:1.2px;background:#143c56c9;padding:8px 10px;border-radius:20px;width:fit-content}
+  .hero-copy{position:relative;margin-top:clamp(130px,37vw,210px);padding:0}
+  .hero h1{font-size:clamp(38px,10.8vw,72px);line-height:1.08;letter-spacing:-2px;overflow-wrap:break-word}
+  .hero-copy p{font-size:14px;line-height:1.7;margin:22px 0}
+  .hero-copy p br{display:none}
+  .hero-copy .button{width:100%;justify-content:space-between;min-height:50px;gap:12px}
+  .hero-bottom{margin-top:28px;gap:20px;align-items:stretch}
+  .tags{gap:8px;max-width:100%}
+  .tags a{padding:9px 12px;font-size:10px;line-height:1.5}
+  .doctor-mini{width:100%;max-width:none;gap:12px;padding:12px}
+  .doctor-mini img{width:56px;height:56px;flex-basis:56px}
+  .doctor-mini strong{font-size:12px}
+  .doctor-mini small{font-size:10px;line-height:1.5;display:block}
+  .doctor-mini>span:last-child{margin-left:auto;flex-shrink:0}
+  .intro-strip{padding:26px 16px}
+  .intro-strip>span{font-size:8px;line-height:2.2;letter-spacing:.4px}
+  .section{padding:48px 18px}
+  h2{overflow-wrap:break-word}
+  .section-heading{gap:18px;margin-bottom:28px}
+  .section-heading h2,.about h2,.home-education h2,.contact h2{font-size:clamp(32px,9.5vw,44px);line-height:1.15;letter-spacing:-1.7px}
+  .section-heading p,.about p,.home-education p,.steps p{font-size:14px;line-height:1.75}
+  .home-care-grid>a{min-height:225px;padding:25px 22px}
+  .home-care-grid h3{font-size:28px;letter-spacing:-1px;padding-right:10px}
+  .home-care-grid p{font-size:13px;padding-right:15px}
+  .about{gap:30px}
+  .portrait-wrap{width:100%;max-width:330px;padding:30px 24px 22px}
+  .portrait{width:100%;max-width:282px}
+  .portrait img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+  .portrait-note{font-size:7px;letter-spacing:1px;line-height:1.8}
+  .portrait-flower{font-size:65px;right:0;bottom:40px}
+  .signature{font-size:24px}
+  .signature small{line-height:1.8;font-size:9px;letter-spacing:.8px}
+  .home-education{gap:28px}
+  .home-education>a{display:block;width:100%;min-width:0}
+  .home-education img{display:block;width:100%;max-width:380px;height:auto;max-height:none;aspect-ratio:4/5;object-fit:contain}
+  .page-banner{padding:40px 20px 44px}
+  .page-banner h1{font-size:clamp(36px,10.5vw,52px);line-height:1.12;letter-spacing:-2px;margin:22px 0;overflow-wrap:break-word}
+  .page-banner p{font-size:14px;line-height:1.75}
+  .page-banner h1 br{display:none}
+  .page-banner h1 em:before{content:' '}
+  .service{grid-template-columns:22px minmax(0,1fr) 34px;gap:10px;padding:25px 0}
+  .service h3{font-size:25px;line-height:1.2}
+  .service-label{font-size:9px;line-height:1.6;display:block;letter-spacing:.6px}
+  .service p{font-size:13px;line-height:1.7}
+  .treatment-detail{gap:20px}
+  .treatment-detail h2{font-size:33px;line-height:1.16;letter-spacing:-1.5px}
+  .treatment-detail p{font-size:14px;line-height:1.75;margin:22px 0}
+  .treatment-detail .button{width:100%;gap:10px;font-size:12px;padding:16px}
+  .treatment-detail li{font-size:12px;max-width:100%;padding:8px 12px}
+  .editorial-intro{grid-template-columns:45px minmax(0,1fr);gap:0 12px}
+  .big-asterisk{font-size:50px}
+  .editorial-intro h3{font-size:24px;line-height:1.2}
+  .editorial-intro p{font-size:13px;line-height:1.7}
+  .publications{grid-template-columns:minmax(0,1fr);gap:24px;width:100%;max-width:420px;margin:auto}
+  .publication{width:100%;display:block}
+  .publication img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}
+  .publication>span{font-size:13px;padding:12px 2px;min-height:44px}
+  .education .text-link{line-height:1.6}
+  .content-note{font-size:12px;line-height:1.7}
+  .reading-note h2,.journey h2{font-size:35px;line-height:1.15}
+  .reading-note p{font-size:14px;line-height:1.75}
+  .page-cta{padding:35px 20px;margin-bottom:12px}
+  .page-cta h2{font-size:clamp(29px,8.5vw,39px);line-height:1.18;letter-spacing:-1.5px}
+  .page-cta .button{width:100%;justify-content:space-between;gap:12px}
+  .booking{gap:28px;margin-top:12px}
+  .booking h2{font-size:clamp(38px,11vw,54px);line-height:1.1;letter-spacing:-2px}
+  .booking p{font-size:14px;line-height:1.75}
+  form{padding:24px 16px;width:100%;min-width:0}
+  form h3{font-size:24px;line-height:1.2}
+  label{font-size:12px;margin-top:18px}
+  input,select{font-size:16px;min-height:50px;max-width:100%;width:100%;padding:12px 10px}
+  form .button{font-size:12px;gap:10px;padding:16px;min-height:52px}
+  .booking .form-note{font-size:12px;line-height:1.65}
+  .contact{gap:28px}
+  .contact-info p,.contact-info a{font-size:15px;line-height:1.7;overflow-wrap:anywhere}
+  .contact-info span{font-size:10px}
+  .faq{gap:20px}
+  .faq h2{font-size:34px}
+  summary{font-size:15px;line-height:1.6;padding:20px 0}
+  details p{font-size:14px;line-height:1.75}
+  .text-link{font-size:13px;line-height:1.7;gap:12px;min-height:44px;max-width:100%}
+  .footer-top{gap:24px}
+  .footer-top .brand{width:100%}
+  .footer-top>a:last-child{font-size:14px;min-height:44px}
+  .footer-bottom{font-size:11px;line-height:1.8}
+  footer{padding:32px 18px 90px}
+  .floating{width:52px;height:52px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:0;justify-content:center;border-radius:50%}
+  .floating>span{display:none}
+  dialog{max-width:calc(100vw - 24px);width:440px;max-height:calc(100dvh - 32px);padding:12px;overflow:auto}
+  .dialog-header{gap:10px}.dialog-header h2{font-size:15px;line-height:1.4}
+  .dialog-header button{min-width:44px;min-height:44px}
+  #dialog-image{width:100%;height:auto;max-height:none;aspect-ratio:4/5;object-fit:contain}
+  dialog>a{font-size:13px;min-height:44px;padding:14px 0 0}
+}
+@media(min-width:761px) and (max-width:980px){
+  .header{gap:12px;padding:0 12px}.header nav{gap:12px;padding:12px 16px}.header-cta{display:none}
+  .home-care-grid{gap:12px}.home-care-grid>a{padding:22px 18px}.home-care-grid h3{font-size:25px}
+  .about,.booking{gap:30px}.section{padding-left:28px;padding-right:28px}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
