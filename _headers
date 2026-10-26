@@ -2,7 +2,7 @@
 # Regerar depois de alterar scripts inline ou dados JSON-LD das paginas.
 # Publicar este arquivo junto com index.html no Netlify.
 /*
-  Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'sha256-ujcXft3QVkE7NeL6RF4yzrpnBs34ZmhX6DfKj6XWkaI=' 'sha256-/qKpUzDhomOcoTTQxsmB+8ddt3vqOPGNkNjyo8SaudY=' 'sha256-rcLQ+B58VxLovEBDeL5OvvB6Sm+n0RbskgrWHExZW1U='; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com https://maps.google.com; connect-src 'none'; form-action 'self' https://wa.me; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'sha256-ct/MuFkd+XVuwamlRwsbu674u031DL2KOHtCLTXWntM=' 'sha256-diTZFjdlEba6VWFJND54WgQ8+TRQ5OvISwuHRucnMzY=' 'sha256-ap0/dJmNIChe60OVsNaOvHgjttBexhXVo8yejCmPx6Y=' 'sha256-l8+wTR5ZIm/s3EFeryN8td31FuLqoFX/sdo9ZuPxnO8=' 'sha256-qmQfFhp+8fJz3T+HeNf5ecTGdJk/XQXPkMAB+nNT64E='; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com https://maps.google.com; connect-src 'none'; form-action 'self' https://wa.me; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin

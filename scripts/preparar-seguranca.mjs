@@ -11,6 +11,9 @@ for (const name of readdirSync(root).filter(name => name.endsWith('.html')).sort
   for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
     if (/\bsrc\s*=/i.test(match[1]) || !match[2].trim()) continue;
     const script = match[2].replace(/\r\n?/g, '\n');
+    if (/application\/ld\+json/i.test(match[1])) {
+      JSON.parse(script);
+    }
     const digest = createHash('sha256').update(script, 'utf8').digest('base64');
     hashes.add(`'sha256-${digest}'`);
   }
