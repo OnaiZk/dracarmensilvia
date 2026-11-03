@@ -19,11 +19,12 @@
   .header nav a{display:block;padding:12px;border-radius:6px}
   .header nav a[aria-current=page]{background:#e3f1fa}
   .hero{min-height:0;padding:20px;gap:24px;display:block;background:#173f58}
-  .hero-art{inset:0 0 auto;height:clamp(190px,55vw,300px);background-image:linear-gradient(180deg,#153d5530 0%,#173f5805 35%,#173f58 100%),url('assets/respiracao-e-sono.jpg');background-size:100% 100%,100% auto;background-position:center,center top;background-repeat:no-repeat}
+  .hero-art{inset:0 0 auto;height:clamp(235px,65vw,335px);background-image:url('assets/hero-sorriso.png');background-size:168% auto;background-position:98% 8%;background-repeat:no-repeat}
+  .hero-art:after{content:'';position:absolute;inset:0 0 -3px 0;background:linear-gradient(180deg,#153d5518 0%,transparent 48%,#173f58cc 78%,#173f58 94%,#173f58 100%);pointer-events:none}
   .hero:after{display:none}
   .hero-top{position:relative;min-height:22px}
   .hero-top .eyebrow{font-size:8px;letter-spacing:1.2px;background:#143c56c9;padding:8px 10px;border-radius:20px;width:fit-content}
-  .hero-copy{position:relative;margin-top:clamp(130px,37vw,210px);padding:0}
+  .hero-copy{position:relative;margin-top:clamp(165px,46vw,245px);padding:0}
   .hero h1{font-size:clamp(38px,10.8vw,72px);line-height:1.08;letter-spacing:-2px;overflow-wrap:break-word}
   .hero-copy p{font-size:14px;line-height:1.7;margin:22px 0}
   .hero-copy p br{display:none}
