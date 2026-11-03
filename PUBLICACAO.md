@@ -21,17 +21,17 @@ Este documento é um checklist local. Não há notificação automática agendad
 - [x] Adicionar `dracarmensilvia.com.br` aos domínios do projeto no Netlify.
 - [x] Obter acesso como contato técnico no Registro.br (`CAMS1298`) e apontar os servidores DNS para o Netlify (`dns1.p01.nsone.net` a `dns4.p01.nsone.net`). A titularidade permanece com a cliente.
 - [x] Definir a versão principal sem `www` (`dracarmensilvia.com.br` como Primary domain) e redirecionamento automático de `www.dracarmensilvia.com.br`.
-- [ ] Aguardar o término da transição de DNS do Registro.br (~2h) e confirmar o certificado HTTPS (Let's Encrypt) ativo no Netlify.
+- [x] Aguardar o término da transição de DNS do Registro.br (~2h) e confirmar o certificado HTTPS (Let's Encrypt) ativo no Netlify.
 - [ ] Conferir os endereços finais das páginas: se a hospedagem redirecionar `.html` para outro formato, alinhar canonical, og:url e sitemap com o destino real.
 
 ## Lembrete: Google Search e Maps
 
-- [ ] Acessar o [Google Search Console](https://search.google.com/search-console) com uma conta autorizada, preferencialmente com a cliente mantendo a propriedade e acesso de recuperação.
-- [ ] Adicionar a propriedade de domínio `dracarmensilvia.com.br`.
-- [ ] Verificar a propriedade usando o registro DNS fornecido pelo Google. O registro deve ser adicionado no serviço que efetivamente gerenciar o DNS do domínio.
-- [ ] Enviar `https://dracarmensilvia.com.br/sitemap.xml` no Search Console.
-- [ ] Inspecionar a página inicial e solicitar indexação; acompanhar erros e o estado das demais páginas.
-- [ ] Confirmar se a clínica já tem um Perfil da Empresa no Google. Se tiver, adicionar ou atualizar o link do site no perfil existente; se não tiver, avaliar criação e verificação com a cliente.
+- [x] Acessar o [Google Search Console](https://search.google.com/search-console) com uma conta autorizada, preferencialmente com a cliente mantendo a propriedade e acesso de recuperação.
+- [x] Adicionar a propriedade de domínio `dracarmensilvia.com.br`.
+- [x] Verificar a propriedade usando o registro DNS fornecido pelo Google. O registro deve ser adicionado no serviço que efetivamente gerenciar o DNS do domínio.
+- [x] Enviar `https://dracarmensilvia.com.br/sitemap.xml` no Search Console.
+- [x] Inspecionar a página inicial e solicitar indexação; acompanhar erros e o estado das demais páginas.
+- [x] Confirmar se a clínica já tem um Perfil da Empresa no Google. Se tiver, adicionar ou atualizar o link do site no perfil existente; se não tiver, avaliar criação e verificação com a cliente.
 
 Solicitar indexação não garante inclusão imediata nem posição nos resultados. Search Console e Perfil da Empresa são procedimentos distintos.
 
