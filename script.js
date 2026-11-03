@@ -40,5 +40,5 @@ if (dialog) {
 document.getElementById('year').textContent = new Date().getFullYear();
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }), {threshold: .08});
-  document.querySelectorAll('.section-heading, .service, .about-copy, .portrait-wrap, .publication, .steps > div, .home-care-grid > a, .treatment-detail > div, .page-cta, .trust-card, .map-frame').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+  document.querySelectorAll('.section-heading, .service, .about-copy, .portrait-wrap, .publication, .steps > div, .home-care-grid > a, .treatment-detail > div, .page-cta, .trust-card, .doctor-photo-card, .map-frame').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
 }

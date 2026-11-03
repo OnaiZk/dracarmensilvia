@@ -15,15 +15,13 @@ Este documento é um checklist local. Não há notificação automática agendad
 
 ## Lembrete: domínio, HTTPS e publicação
 
-- [ ] Publicar a pasta atual no Netlify para o teste. Incluir `_headers` na raiz junto com `index.html`, as outras páginas, os três CSS, `script.js`, favicon, robots.txt, sitemap.xml e `assets/`.
-- [ ] Não usar o ZIP antigo de 19/10: ele não contém as alterações posteriores.
-- [ ] Registrar a URL `netlify.app` publicada para conferência.
-- [ ] Adicionar `dracarmensilvia.com.br` aos domínios do projeto no Netlify.
-- [ ] Obter acesso como contato técnico no Registro.br ou orientar a cliente a inserir os registros fornecidos pelo Netlify. A titularidade permanece com ela.
-- [ ] Antes de alterar o DNS, conferir se existe e-mail no domínio e preservar seus registros.
-- [ ] Usar os registros DNS mostrados pelo próprio projeto Netlify; não adivinhar IPs ou valores de CNAME.
-- [ ] Confirmar certificado HTTPS válido e redirecionamento de HTTP para HTTPS.
-- [ ] Definir a versão principal sem `www`, correspondente aos metadados atuais, e conferir o redirecionamento de `www`.
+- [x] Publicar a pasta atual no Netlify para o teste. Incluir `_headers` na raiz junto com `index.html`, as outras páginas, os três CSS, `script.js`, favicon, robots.txt, sitemap.xml e `assets/`.
+- [x] Não usar o ZIP antigo de 19/10: ele não contém as alterações posteriores.
+- [x] Registrar a URL `netlify.app` publicada para conferência (`https://dracarmensilvia.netlify.app`).
+- [x] Adicionar `dracarmensilvia.com.br` aos domínios do projeto no Netlify.
+- [x] Obter acesso como contato técnico no Registro.br (`CAMS1298`) e apontar os servidores DNS para o Netlify (`dns1.p01.nsone.net` a `dns4.p01.nsone.net`). A titularidade permanece com a cliente.
+- [x] Definir a versão principal sem `www` (`dracarmensilvia.com.br` como Primary domain) e redirecionamento automático de `www.dracarmensilvia.com.br`.
+- [ ] Aguardar o término da transição de DNS do Registro.br (~2h) e confirmar o certificado HTTPS (Let's Encrypt) ativo no Netlify.
 - [ ] Conferir os endereços finais das páginas: se a hospedagem redirecionar `.html` para outro formato, alinhar canonical, og:url e sitemap com o destino real.
 
 ## Lembrete: Google Search e Maps

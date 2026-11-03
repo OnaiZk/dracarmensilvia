@@ -29,6 +29,7 @@ const policy = [
   "style-src 'self' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
+  "media-src 'self'",
   "frame-src https://www.google.com https://maps.google.com",
   "connect-src 'none'",
   "form-action 'self' https://wa.me",
