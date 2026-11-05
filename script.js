@@ -18,11 +18,17 @@ document.querySelectorAll('[data-service]').forEach(link => link.addEventListene
 if (serviceField) {
   const requested = new URLSearchParams(window.location.search).get('atendimento');
   if ([...serviceField.options].some(o => o.value === requested)) serviceField.value = requested;
+  const otherWrap = document.getElementById('other-wrap');
+  const otherInput = document.getElementById('other-service');
+  if (otherWrap && otherInput) { const toggleOther = () => { const isOther = serviceField.value === 'Outro'; otherWrap.hidden = !isOther; otherInput.required = isOther; }; serviceField.addEventListener('change', toggleOther); toggleOther(); }
 }
 document.getElementById('booking-form')?.addEventListener('submit', event => {
   event.preventDefault();
   const name = document.getElementById('name').value.trim();
-  const message = 'Olá, Dra. Carmen! Vim pelo site da Cuidar e Sorrir.' + (name ? '\nMeu nome é ' + name + '.' : '') + '\nGostaria de solicitar uma consulta para: ' + serviceField.value + '.\nAtendimento: Particular.\nPreferência de período: ' + document.getElementById('period').value + '.\nQuais horários estão disponíveis?';
+  const otherDetail = document.getElementById('other-service')?.value.trim();
+  if (!name || !serviceField.value || !document.getElementById('period').value || (serviceField.value === 'Outro' && !otherDetail)) return;
+  const chosenService = serviceField.value === 'Outro' ? 'Outro — ' + otherDetail : serviceField.value;
+  const message = 'Olá, Dra. Carmen! Vim pelo site da Cuidar e Sorrir.\nMeu nome é ' + name + '.\nGostaria de solicitar uma consulta para: ' + chosenService + '.\nPreferência de período: ' + document.getElementById('period').value + '.\nQuais horários estão disponíveis?';
   window.location.assign('https://wa.me/5511999755757?text=' + encodeURIComponent(message));
 });
 const dialog = document.getElementById('image-dialog');
