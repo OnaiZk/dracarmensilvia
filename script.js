@@ -33,15 +33,23 @@ document.getElementById('booking-form')?.addEventListener('submit', event => {
 });
 const dialog = document.getElementById('image-dialog');
 if (dialog) {
-  document.querySelectorAll('[data-image]').forEach(button => button.addEventListener('click', () => {
-    const image = document.getElementById('dialog-image');
-    image.src = button.dataset.image; image.alt = button.querySelector('img').alt;
+  const dialogImg = document.getElementById('dialog-image');
+  const dialogVid = document.getElementById('dialog-video');
+  const stopMedia = () => { if (dialogVid) { dialogVid.pause(); dialogVid.removeAttribute('src'); dialogVid.load(); } };
+  document.querySelectorAll('[data-image], [data-video]').forEach(button => button.addEventListener('click', () => {
     document.getElementById('image-title').textContent = button.dataset.title;
+    if (button.dataset.video) {
+      if (dialogImg) dialogImg.style.display = 'none';
+      if (dialogVid) { dialogVid.src = button.dataset.video; dialogVid.style.display = 'block'; dialogVid.play().catch(() => {}); }
+    } else {
+      if (dialogVid) { dialogVid.pause(); dialogVid.style.display = 'none'; dialogVid.removeAttribute('src'); }
+      if (dialogImg) { dialogImg.src = button.dataset.image; dialogImg.alt = button.querySelector('img')?.alt || ''; dialogImg.style.display = 'block'; }
+    }
     dialog.showModal(); document.body.classList.add('modal-open');
   }));
-  document.getElementById('close-dialog').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
-  dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+  document.getElementById('close-dialog')?.addEventListener('click', () => { stopMedia(); dialog.close(); });
+  dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) { stopMedia(); dialog.close(); } } });
+  dialog.addEventListener('close', () => { stopMedia(); document.body.classList.remove('modal-open'); });
 }
 document.getElementById('year').textContent = new Date().getFullYear();
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

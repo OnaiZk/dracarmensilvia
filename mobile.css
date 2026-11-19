@@ -124,7 +124,7 @@
   dialog{max-width:calc(100vw - 24px);width:440px;max-height:calc(100dvh - 32px);padding:12px;overflow:auto}
   .dialog-header{gap:10px}.dialog-header h2{font-size:15px;line-height:1.4}
   .dialog-header button{min-width:44px;min-height:44px}
-  #dialog-image{width:100%;height:auto;max-height:none;aspect-ratio:4/5;object-fit:contain}
+  #dialog-image,#dialog-video{width:100%;height:auto;max-height:72dvh;aspect-ratio:auto;object-fit:contain}
   dialog>a{font-size:13px;min-height:44px;padding:14px 0 0}
 }
 @media(min-width:761px) and (max-width:980px){
